@@ -1,5 +1,4 @@
 
-
 {% block content1 %}
 
 <form action="{{ url_for('home') }}" method="POST">
@@ -7,6 +6,17 @@
     {{ form.submit() }}
     {{ form.hidden_tag() }}
 </form>
-
-
+{% for message in get_flashed_messages() %}
+    <strong>{{ message }}</strong>
+{% endfor %}
 {% endblock %}
+
+<h3>Navigation</h3>
+<ul>
+    <li><a href="{{ url_for('home')}}">Go to Pokemon input form.</a></li>
+    <li><a href="{{ url_for('all_names')}}">See all pokemon.</a></li>
+    <li><a href="{{ url_for('tallest_pokemon')}}">See the tallest</a></li>
+    <li><a href="{{ url_for('heaviest_pokemon')}}">See the heaviest</a></li>
+    <li><a href="{{ url_for('favorite_form')}}">Go to the favorite form</a></li>
+    <li><a href="{{ url_for('show_favs')}}">See favorite results</a></li>
+</ul>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+{% for dc in get_flashed_messages() %}
+<b>Fields that were a problem:</b><br><br>
+    {% for key in dc %}
+        * <b>{{ key }}</b> - <i> {{ dc[key][0] }}</i> <br>
+    {% endfor %}
+
+{% endfor %}
+<h1>Favorite Pokemon!</h1>
+  <form action="{{url_for('show_favs')}}" method="GET">
+    {{ form.hidden_tag() }}
+    {{ form.fav_name.label }} {{ form.fav_name() }}<br>
+    {{ form.nick_name.label }} {{ form.nick_name() }}<br>
+    {{ form.submit() }}<br>
+  </form>
+
+{% endblock %}

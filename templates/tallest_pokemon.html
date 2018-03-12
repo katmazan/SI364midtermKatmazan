@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content1 %}
+{% for n in names %}
+    <p>{{ n.poke_name }}, Height: {{n.poke_height}}</p> 
+{% endfor %}
+
+
+{% if not names %}
+    There is no data for pokemon yet.
+{% endif %}
+<h1>The tallest Pokemon is: </h1>
+<p>{{tallest}} , Height: <i>{{height}}</i></p>
+{% endblock %}
+
