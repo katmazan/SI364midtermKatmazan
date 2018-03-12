@@ -103,9 +103,7 @@ def home():
         ##only adds pokemon if it is not in database
         if not pokemon:
             
-            """newname = Name(name = poke_name)
-            db.session.add(newname)
-            db.session.commit()"""
+           
         
         
             params = {}
@@ -114,9 +112,9 @@ def home():
             print(params)
             
             response = requests.get('http://pokeapi.co/api/v2/pokemon/' + params['name'] + '/')
-            if response.status_code != '200å':
-                return("The data you entered was not available in the data, check spelling")
-            print(response)
+            ##if response.status_code != '200':
+                ##return("The data you entered was not available in the data, check spelling")
+            
         
             poke_height = int(json.loads(response.text)['height'])
             new_height = Height(poke_height = poke_height, poke_name = poke_name)
