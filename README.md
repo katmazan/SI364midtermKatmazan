@@ -8,11 +8,13 @@
  **Include at least 2 additional template .html files we did not provide.**
  
  **At least one additional template with a Jinja template for loop and at least one additional template with a Jinja template conditional.
-These could be in the same template, and could be 1 of the 2 additional template files.
+These could be in the same template, and could be 1 of the 2 additional template files.**
  **At least one errorhandler for a 404 error and a corresponding template.**
  **At least one request to a REST API that is based on data submitted in a WTForm.**
  **At least one additional (not provided) WTForm that sends data with a GET request to a new page.**
+ 
  At least one additional (not provided) WTForm that sends data with a POST request to the same page.
+ 
  **At least one custom validator for a field in a WTForm.**
  **At least 2 additional model classes.**
  **Have a one:many relationship that works properly built between 2 of your models**.
